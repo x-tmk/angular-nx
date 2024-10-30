@@ -1,0 +1,241 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<style>
+  :host {
+    --bright-blue: oklch(51.01% 0.274 263.83);
+    --electric-violet: oklch(53.18% 0.28 296.97);
+    --french-violet: oklch(47.66% 0.246 305.88);
+    --vivid-pink: oklch(69.02% 0.277 332.77);
+    --hot-red: oklch(61.42% 0.238 15.34);
+    --orange-red: oklch(63.32% 0.24 31.68);
+
+    --gray-900: oklch(19.37% 0.006 300.98);
+    --gray-700: oklch(36.98% 0.014 302.71);
+    --gray-400: oklch(70.9% 0.015 304.04);
+
+    --red-to-pink-to-purple-vertical-gradient: linear-gradient(
+      180deg,
+      var(--orange-red) 0%,
+      var(--vivid-pink) 50%,
+      var(--electric-violet) 100%
+    );
+
+    --red-to-pink-to-purple-horizontal-gradient: linear-gradient(
+      90deg,
+      var(--orange-red) 0%,
+      var(--vivid-pink) 50%,
+      var(--electric-violet) 100%
+    );
+
+    --pill-accent: var(--bright-blue);
+
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1 {
+    font-size: 3.125rem;
+    color: var(--gray-900);
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.125rem;
+    margin: 0;
+    font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+  }
+
+  p {
+    margin: 0;
+    color: var(--gray-700);
+  }
+
+  main {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: inherit;
+    position: relative;
+  }
+
+  .angular-logo {
+    max-width: 9.2rem;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 3rem;
+  }
+
+  .content h1 {
+    margin-top: 1.75rem;
+  }
+
+  .content p {
+    margin-top: 1.5rem;
+  }
+
+  .divider {
+    width: 1px;
+    background: var(--red-to-pink-to-purple-vertical-gradient);
+    margin-inline: 0.5rem;
+  }
+
+  .pill-group {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+
+  .pill {
+    display: flex;
+    align-items: center;
+    --pill-accent: var(--bright-blue);
+    background: color-mix(in srgb, var(--pill-accent) 5%, transparent);
+    color: var(--pill-accent);
+    padding-inline: 0.75rem;
+    padding-block: 0.375rem;
+    border-radius: 2.75rem;
+    border: 0;
+    transition: background 0.3s ease;
+    font-family: var(--inter-font);
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.4rem;
+    letter-spacing: -0.00875rem;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .pill:hover {
+    background: color-mix(in srgb, var(--pill-accent) 15%, transparent);
+  }
+
+  .pill-group .pill:nth-child(6n + 1) {
+    --pill-accent: var(--bright-blue);
+  }
+  .pill-group .pill:nth-child(6n + 2) {
+    --pill-accent: var(--french-violet);
+  }
+  .pill-group .pill:nth-child(6n + 3),
+  .pill-group .pill:nth-child(6n + 4),
+  .pill-group .pill:nth-child(6n + 5) {
+    --pill-accent: var(--hot-red);
+  }
+
+  .pill-group svg {
+    margin-inline-start: 0.25rem;
+  }
+
+  .social-links {
+    display: flex;
+    align-items: center;
+    gap: 0.73rem;
+    margin-top: 1.5rem;
+  }
+
+  .social-links path {
+    transition: fill 0.3s ease;
+    fill: var(--gray-400);
+  }
+
+  .social-links a:hover svg path {
+    fill: var(--gray-900);
+  }
+
+  @media screen and (max-width: 650px) {
+    .content {
+      flex-direction: column;
+      width: max-content;
+    }
+
+    .divider {
+      height: 1px;
+      width: 100%;
+      background: var(--red-to-pink-to-purple-horizontal-gradient);
+      margin-block: 1.5rem;
+    }
+  }
+</style>
+
+<main class="main">
+  <div class="content">
+    <div class="left-side">
+      <svg class="v7-svg-logo || v7-u-visible-sm" viewBox="0 0 200 60">
+        <polygon fill="#FFFFFF" points="200,21.6 178.4,43.1 156.8,21.6 178.4,0 "></polygon>
+        <polygon fill="#452325" points="11.3,50.8 11.2,50.8 5.8,28.8 0,28.8 7.9,59.5 14.6,59.5 22.4,28.8 16.7,28.8     "></polygon>
+        <path fill="#452325" d="M34.9,28.3c-5.7,0-9.7,2.7-9.7,10.3v11c0,7.6,4,10.3,9.7,10.3c5.7,0,9.7-2.7,9.7-10.3v-11
+                C44.6,31.1,40.6,28.3,34.9,28.3z M38.7,50.4c0,3.4-1.5,4.3-3.8,4.3c-2.3,0-3.8-0.9-3.8-4.3V37.9c0-3.4,1.5-4.3,3.8-4.3
+                c2.3,0,3.8,0.9,3.8,4.3V50.4z"></path>
+        <polygon fill="#452325" points="55.3,28.8 49.4,28.8 49.4,59.5 64.7,59.5 64.7,54.3 55.3,54.3    "></polygon>
+        <path fill="#452325" d="M77.5,28.3c-5.7,0-9.7,2.7-9.7,10.3v11c0,7.6,4,10.3,9.7,10.3c5.7,0,9.7-2.7,9.7-10.3v-11
+                C87.2,31.1,83.2,28.3,77.5,28.3z M81.4,50.4c0,3.4-1.5,4.3-3.8,4.3c-2.3,0-3.8-0.9-3.8-4.3V37.9c0-3.4,1.5-4.3,3.8-4.3
+                c2.3,0,3.8,0.9,3.8,4.3V50.4z"></path>
+        <polygon fill="#452325" points="90.2,34 97.1,34 97.1,59.5 103,59.5 103,34 109.8,34 109.8,28.8 90.2,28.8    "></polygon>
+        <polygon fill="#452325" points="119.2,46.2 127,46.2 127,41 119.2,41 119.2,34 129.4,34 129.4,28.8 113.3,28.8 113.3,59.5 129.9,59.5
+                129.9,54.3 119.2,54.3   "></polygon>
+        <polygon fill="#452325" points="147.2,28.8 140.5,28.8 132.6,59.5 138.4,59.5 143.8,37.5 143.8,37.5 149.3,59.5 155.1,59.5    "></polygon>
+        <path fill="#E10E49" d="M200,21.6l-7.2-7.2l0,0l-1.6-1.6V16l-1.6,1.6v-6.4L188,9.6v9.6l0,0l-1.6,1.6V8l-0.8-0.8L178.4,0l-7.2,7.2
+                L170.4,8v12.8l-1.6-1.6V9.6l-1.6,1.6v6.4l-1.6-1.6v-3.2l-1.6,1.6l0,0l-7.2,7.2l7.2,7.2l1.6,1.6v-3.2l1.6-1.6v6.4l1.6,1.6v-9.6
+                l1.6-1.6v12.8l0.8,0.8l7.2,7.2l7.2-7.2l0.8-0.8V22.3l1.6,1.6h0v9.6l1.6-1.6v-6.4l1.6,1.6v3.2l1.6-1.6l0,0l0,0L200,21.6z M178.4,14.4
+                L178.4,14.4L178.4,14.4L178.4,14.4L178.4,14.4z M184.8,22.3v12.8l-1.6-1.6l0,0v-9.6l-1.6,1.6v6.4l-1.6-1.6l0,0v-3.2l-1.6,1.6
+                l-1.6-1.6v3.2l-1.6,1.6v-6.4l-1.6-1.6v9.6l-1.6,1.6V22.3l-0.8-0.8l0.8-0.8V8l1.6,1.6v9.6l1.6-1.6v-6.4l1.6,1.6V16l1.6-1.6L180,16
+                v-3.2l1.6-1.6l0,0v6.4l1.6,1.6V9.6l1.6-1.6v12.8l0.8,0.8L184.8,22.3z"></path>
+      </svg>
+      <h1>Hello, {{ title }}</h1>
+    </div>
+    <div class="divider" role="separator" aria-label="Divider"></div>
+    <div class="right-side">
+      <div class="pill-group">
+        @for (item of [
+          { title: 'Search', link: 'search' },
+          { title: 'Booking', link: 'booking' },
+          { title: 'Change', link: 'change' },
+          { title: 'Check-in', link: 'checkin' },
+          { title: 'Profile', link: 'profile' },
+        ]; track item.title) {
+          <a
+            (click)="navigateTo(item.link)"
+            class="pill"
+            target="_blank"
+            rel="noopener"
+          >
+            <span>{{ item.title }}</span>
+          </a>
+        }
+      </div>
+    </div>
+  </div>
+</main>
+<main class="main"><router-outlet /></main>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+
