@@ -1,0 +1,33 @@
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.logo-image {
+  width: 150px;
+}
+
+.logo-subtitle {
+  color: #8c8c8c;
+  margin-top: 2px;
+  font-weight: 400;
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+}
+
+.header {
+  background-color: white;
+  padding-top: 10px;
+  border-bottom: 1px solid #ddd;
+  height: 70px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}

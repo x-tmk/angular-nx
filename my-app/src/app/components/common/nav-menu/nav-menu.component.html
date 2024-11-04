@@ -1,0 +1,6 @@
+<nav class="nav-menu">
+  <a *ngFor="let module of modules"
+     [routerLink]="['/' + module]"
+     [routerLinkActive]="['active']"
+     class="nav-item active">{{ module | uppercase }}</a>
+</nav>
