@@ -10,6 +10,4 @@ import { HeaderComponent } from './components/common/header/header.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'Volotea';
-
 }
