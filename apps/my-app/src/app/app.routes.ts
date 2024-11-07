@@ -7,13 +7,6 @@ export const routes: Routes = [
       import('./components/search/search.module').then((m) => m.SearchModule),
   },
   {
-    path: 'booking',
-    loadChildren: () =>
-      import('./components/booking/booking.module').then(
-        (m) => m.BookingModule
-      ),
-  },
-  {
     path: 'profile',
     loadChildren: () =>
       import('./components/profile/profile.module').then(
