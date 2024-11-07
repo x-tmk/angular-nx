@@ -1,0 +1,80 @@
+{
+  "name": "booking",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "app",
+  "sourceRoot": "apps/booking/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/booking",
+        "index": "apps/booking/src/index.html",
+        "main": "apps/booking/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/booking/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": ["apps/booking/src/favicon.ico", "apps/booking/src/assets"],
+        "styles": ["apps/booking/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "options": {
+        "port": 4002
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "booking:build:production"
+        },
+        "development": {
+          "buildTarget": "booking:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "booking:build"
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "booking:build",
+        "port": 4002,
+        "spa": true
+      }
+    }
+  }
+}
