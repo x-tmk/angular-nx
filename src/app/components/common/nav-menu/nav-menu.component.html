@@ -1,6 +1,21 @@
 <nav class="nav-menu">
-  <a *ngFor="let module of modules"
-     [routerLink]="['/' + module]"
-     [routerLinkActive]="['active']"
-     class="nav-item active">{{ module | uppercase }}</a>
+  <ul>
+    <li *ngFor="let module of modules" class="nav-item">
+      <a
+        [routerLink]="['/' + module.page]"
+        [routerLinkActive]="['active']"
+        class="nav-link active"
+        >{{ module.page | uppercase }}</a
+      >
+      <ul class="sub-menu">
+        <li>
+          <a
+            [routerLink]="['/', module.page, module.subpage]"
+            class="nav-subpage-link"
+            >{{ module.subpage }}</a
+          >
+        </li>
+      </ul>
+    </li>
+  </ul>
 </nav>
