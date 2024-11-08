@@ -5,15 +5,16 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 @Component({
   selector: 'app-nav-menu',
   standalone: true,
-  imports: [
-    NgForOf,
-    UpperCasePipe,
-    RouterLink,
-    RouterLinkActive
-  ],
+  imports: [NgForOf, UpperCasePipe, RouterLink, RouterLinkActive],
   templateUrl: './nav-menu.component.html',
-  styleUrl: './nav-menu.component.scss'
+  styleUrl: './nav-menu.component.scss',
 })
 export class NavMenuComponent {
-  modules = ['search', 'booking', 'change', 'checkin', 'profile'];
+  modules = [
+    { page: 'search', subpage: 'calendar' },
+    { page: 'booking', subpage: 'flights' },
+    { page: 'change', subpage: 'confirmation' },
+    { page: 'checkin', subpage: 'confirmation' },
+    { page: 'profile', subpage: 'journeys' },
+  ];
 }
