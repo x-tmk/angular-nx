@@ -47,8 +47,12 @@
             "allow": [],
             "depConstraints": [
               {
-                "sourceTag": "*",
-                "onlyDependOnLibsWithTags": ["*"]
+                "sourceTag": "domain:my-app",
+                "onlyDependOnLibsWithTags": ["domain:my-app", "domain:common"]
+              },
+              {
+                "sourceTag": "domain:booking",
+                "onlyDependOnLibsWithTags": ["domain:booking", "domain:common"]
               }
             ]
           }

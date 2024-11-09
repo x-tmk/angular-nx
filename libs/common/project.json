@@ -4,7 +4,7 @@
   "sourceRoot": "libs/common/src",
   "prefix": "lib",
   "projectType": "library",
-  "tags": [],
+  "tags": ["domain:common"],
   "targets": {
     "build": {
       "executor": "@nx/angular:ng-packagr-lite",

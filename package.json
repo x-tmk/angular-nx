@@ -34,6 +34,7 @@
     "@angular/compiler-cli": "^17.3.0",
     "@nx/angular": "19.8.9",
     "@nx/eslint": "19.8.9",
+    "@nx/eslint-plugin": "^19.8.9",
     "@nx/js": "19.8.9",
     "@nx/web": "19.8.9",
     "@nx/workspace": "19.8.9",

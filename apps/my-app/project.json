@@ -9,6 +9,7 @@
   },
   "sourceRoot": "apps/my-app/src",
   "prefix": "app",
+  "tags": ["domain:my-app"],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",

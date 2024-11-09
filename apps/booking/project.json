@@ -4,7 +4,7 @@
   "projectType": "application",
   "prefix": "app",
   "sourceRoot": "apps/booking/src",
-  "tags": [],
+  "tags": ["domain:booking"],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
