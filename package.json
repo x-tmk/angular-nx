@@ -35,6 +35,7 @@
     "@nx/angular": "19.8.9",
     "@nx/eslint": "19.8.9",
     "@nx/js": "19.8.9",
+    "@nx/web": "19.8.9",
     "@nx/workspace": "19.8.9",
     "@schematics/angular": "^17.3.11",
     "@swc-node/register": "~1.9.1",
