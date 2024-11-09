@@ -1,6 +1,5 @@
 {
-  "root": true,
-  "ignorePatterns": ["**/*"],
+  "ignorePatterns": ["!**/*"],
   "overrides": [
     {
       "files": ["*.ts"],
@@ -36,29 +35,7 @@
         "plugin:@angular-eslint/template/accessibility"
       ],
       "rules": {}
-    },
-    {
-      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
-      "rules": {
-        "@nx/enforce-module-boundaries": [
-          "error",
-          {
-            "enforceBuildableLibDependency": true,
-            "allow": [],
-            "depConstraints": [
-              {
-                "sourceTag": "domain:my-app",
-                "onlyDependOnLibsWithTags": ["domain:my-app", "domain:common"]
-              },
-              {
-                "sourceTag": "domain:booking",
-                "onlyDependOnLibsWithTags": ["domain:booking", "domain:common"]
-              }
-            ]
-          }
-        ]
-      }
     }
   ],
-  "plugins": ["@nx"]
+  "extends": "../../.eslintrc.json"
 }

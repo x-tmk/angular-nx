@@ -1,0 +1,87 @@
+{
+  "name": "my-app",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "generators": {
+    "@schematics/angular:component": {
+      "style": "scss"
+    }
+  },
+  "sourceRoot": "apps/my-app/src",
+  "prefix": "app",
+  "tags": ["domain:my-app"],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:application",
+      "options": {
+        "outputPath": "dist/apps/my-app",
+        "index": "apps/my-app/src/index.html",
+        "browser": "apps/my-app/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/my-app/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": ["apps/my-app/src/favicon.ico", "apps/my-app/src/assets"],
+        "styles": ["apps/my-app/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "my-app:build:production"
+        },
+        "development": {
+          "buildTarget": "my-app:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "my-app:build"
+      }
+    },
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "polyfills": ["zone.js", "zone.js/testing"],
+        "tsConfig": "apps/my-app/tsconfig.spec.json",
+        "inlineStyleLanguage": "scss",
+        "assets": ["apps/my-app/src/favicon.ico", "apps/my-app/src/assets"],
+        "styles": ["apps/my-app/src/styles.scss"],
+        "scripts": []
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["apps/my-app/**/*.ts", "apps/my-app/**/*.html"]
+      }
+    }
+  }
+}
